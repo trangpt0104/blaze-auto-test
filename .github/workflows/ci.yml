@@ -29,6 +29,9 @@ jobs:
   test:
     needs: lint
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      checks: write
     env:
       CI: true
     strategy:

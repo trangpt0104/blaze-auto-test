@@ -54,7 +54,7 @@ jobs:
           path: ${{ env.REPORT_OUTPUT_DIR }}
       - name: Publish test results (JUnit)
         if: always()
-        uses: EnricoMi/publish-unit-test-result-action@v3
+        uses: EnricoMi/publish-unit-test-result-action@v2
         with:
           files: ${{ env.REPORT_OUTPUT_DIR }}/junit.xml
           check_name: Test results (${{ matrix.browser }})
